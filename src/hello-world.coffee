@@ -15,8 +15,10 @@
 #   tombell
 
 module.exports = (robot) ->
-  robot.respond /hello/, (msg) ->
-    msg.reply "hello!"
-
-  robot.hear /orly/, ->
-    msg.send "yarly"
+  robot.hear /beer/, (msg) ->
+    five_pm = moment.tz("17:00", "h:mm", "America/New_York")
+    midnight = moment.tz("23:59", "h:mm", "America/New_York")
+    if moment.tz("America/New_York").isBetween(five_pm, midnight)
+      msg.reply "It's :beer: o'clock right now!"
+    else
+      msg.reply ":beer: o'clock is in #{five_pm.fromNow()}"
