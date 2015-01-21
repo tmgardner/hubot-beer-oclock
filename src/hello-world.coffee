@@ -16,6 +16,7 @@
 
 module.exports = (robot) ->
   robot.hear /beer/, (msg) ->
+    moment = require('moment-timezone');
     five_pm = moment.tz("17:00", "h:mm", "America/New_York")
     midnight = moment.tz("23:59", "h:mm", "America/New_York")
     if moment.tz("America/New_York").isBetween(five_pm, midnight)
