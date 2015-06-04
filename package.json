@@ -1,8 +1,8 @@
 {
-  "name": "hubot-beer-oclock",
-  "description": "An example script package for Hubot",
+  "name": "hubot-shonuff",
+  "description": "An extended joke about the Last Dragon for Hubot",
   "version": "1.0.0",
-  "author": "Joe Ennever <joe.ennever@gmail.com>",
+  "author": "Todd Gardner <todd.gardner@gmail.com>",
   "license": "MIT",
   "keywords": [
     "hubot",
