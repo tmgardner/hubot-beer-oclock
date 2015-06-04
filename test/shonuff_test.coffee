@@ -18,14 +18,15 @@ describe 'shonuff', ->
   context 'user says hi to hubot', ->
     beforeEach ->
 
-    listOfPhrases = [
+    [
       "who's the master?",
       "Who is the master",
       "Who is the meanest",
       "WHO IS THE PRETTIEST?",
-      "Who's the baddest mofo low-down around this town?"
-    ]
-    for phrase in listOfPhrases
+      "Who's the baddest mofo low-down around this town?",
+      # Friggen smart quotes:
+      "who’s the prettiest?"
+    ].forEach (phrase) ->
       it "should reply to #{phrase}", ->
-        @room.user.say 'alice', phrase
+        @room.user.say 'alice', "#{phrase}"
         expect(@room.messages).to.include.something.that.deep.equals(['hubot', "@alice Sho'nuff!"])
