@@ -1,25 +1,39 @@
 {
   "name": "hubot-shonuff",
   "description": "An extended joke about the Last Dragon for Hubot",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Todd Gardner <todd.gardner@gmail.com>",
   "license": "MIT",
+
   "keywords": [
     "hubot",
     "hubot-scripts"
   ],
+
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tmgardner/hubot-shonuff.git"
+  },
+
+  "bugs": {
+    "url": "https://github.com/tmgardner/hubot-shonuff/issues"
+  },
+
   "dependencies": {
-    "coffee-script": "~1.6",
-    "moment": ">=0.0.0",
-    "moment-timezone": "^0.3.0"
+    "coffee-script": "~1.6"
   },
+
   "devDependencies": {
-    "mocha": "*",
-    "chai": "*",
-    "sinon-chai": "*",
-    "sinon": "*"
+    "mocha": "2.1.0",
+    "chai": "2.1.0",
+    "chai-things": "*",
+    "sinon": "1.7.3",
+    "sinon-chai": "2.7.0",
+    "hubot-test-helper": "0.0.4"
   },
+
   "main": "index.coffee",
+
   "scripts": {
     "test": "script/test"
   }
